@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- TITLE -->
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- GOOGLE FONTS / UBUNTU -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="./assets/styles/css/style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+</head>
+
+<body>
+
+  <main class="container">
+    <div class="contentBox">
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="progress active">
+          <div class="progress__range">1</div>
+          <div class="progress__info">
+            <div class="progress__step">Step 1</div>
+            <div class="progress__name">Your Info</div>
+          </div>
+        </div>
+        <div class="progress">
+          <div class="progress__range">2</div>
+          <div class="progress__info">
+            <div class="progress__step">Step 2</div>
+            <div class="progress__name">Select Plan</div>
+          </div>
+        </div>
+        <div class="progress">
+          <div class="progress__range">3</div>
+          <div class="progress__info">
+            <div class="progress__step">Step 3</div>
+            <div class="progress__name">Add-Ons</div>
+          </div>
+        </div>
+        <div class="progress">
+          <div class="progress__range">4</div>
+          <div class="progress__info">
+            <div class="progress__step">Step 4</div>
+            <div class="progress__name">Summary</div>
+          </div>
+        </div>
+      </div>
+      <!-- FORM -->
+      <form action="index.html" method="post" id="multistepForm">
+        <div class="stepBox">
+          <!-- STEP 1 -->
+          <div class="step" id="step-1">
+            <h1>Personal info</h1>
+            <p class="step__text">Please provide your name, email address, and phone number.</p>
+            <div class="fieldGroup">
+              <div class="inputBox">
+                <div class="labelLine">
+                  <label for="name">Name</label>
+                  <span class="invalid">This field is required</span>
+                </div>
+                <div class="inputLine">
+                  <input type="text" name="name" id="name" placeholder="e.g. Stephen King">
+                </div>
+              </div>
+              <div class="inputBox">
+                <div class="labelLine">
+                  <label for="email">Email Address</label>
+                  <span class="invalid">This field is required</span>
+                </div>
+                <div class="inputLine">
+                  <input type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com">
+                </div>
+              </div>
+              <div class="inputBox">
+                <div class="labelLine">
+                  <label for="phone">Phone Number</label>
+                  <span class="invalid">This field is required</span>
+                </div>
+                <div class="inputLine">
+                  <input type="tel" name="phone" id="phone" placeholder="e.g. +1 234 567 890">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- STEP 2 -->
+          <div class="step" id="step-2">
+            <div class="stepTitle">Select your plan</div>
+            <p class="step__text">You have the option of monthly or yearly billing.</p>
+            <div class="optionDuration">
+              <div class="planSelection" id="monthlyOption">
+                <label for="radioCard-1" class="card">
+                  <input type="radio" name="radioCard" class="radioCard" id="radioCard-1" value="1" />
+                  <div class="card__container">
+                    <div class="card__content">
+                      <div class="image">
+                        <img src="./assets/images/icon-arcade.svg" alt="Icon Arcade" />
+                      </div>
+                      <div class="card__details">
+                        <div class="card__title">Arcade</div>
+                        <div class="card__price">&dollar;9/mo</div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <label for="radioCard-2" class="card">
+                  <input type="radio" name="radioCard" class="radioCard" id="radioCard-2" value="2" />
+                  <div class="card__container">
+                    <div class="card__content">
+                      <div class="image">
+                        <img src="./assets/images/icon-advanced.svg" alt="Icon Advanced" />
+                      </div>
+                      <div class="card__details">
+                        <div class="card__title">Advanced</div>
+                        <div class="card__price">&dollar;12/mo</div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <label for="radioCard-3" class="card">
+                  <input type="radio" name="radioCard" class="radioCard" id="radioCard-3" value="3" />
+                  <div class="card__container">
+                    <div class="card__content">
+                      <div class="image">
+                        <img src="./assets/images/icon-pro.svg" alt="Icon Pro" />
+                      </div>
+                      <div class="card__details">
+                        <div class="card__title">Pro</div>
+                        <div class="card__price">&dollar;15/mo</div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <div class="planSelection" id="yearlyOption">
+                <label for="radioCard-4" class="card">
+                  <input type="radio" name="radioCard" class="radioCard" id="radioCard-4" value="4" />
+                  <div class="card__container">
+                    <div class="card__content">
+                      <div class="image">
+                        <img src="./assets/images/icon-arcade.svg" alt="Icon Arcade" />
+                      </div>
+                      <div class="card__details">
+                        <div class="card__title">Arcade</div>
+                        <div class="card__price">&dollar;90/yr</div>
+                        <div class="monthFree">2 months free</div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <label for="radioCard-5" class="card">
+                  <input type="radio" name="radioCard" class="radioCard" id="radioCard-5" value="5" />
+                  <div class="card__container">
+                    <div class="card__content">
+                      <div class="image">
+                        <img src="./assets/images/icon-advanced.svg" alt="Icon Advanced" />
+                      </div>
+                      <div class="card__details">
+                        <div class="card__title">Advanced</div>
+                        <div class="card__price">&dollar;120/yr</div>
+                        <div class="monthFree">2 months free</div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <label for="radioCard-6" class="card">
+                  <input type="radio" name="radioCard" class="radioCard" id="radioCard-6" value="6" />
+                  <div class="card__container">
+                    <div class="card__content">
+                      <div class="image">
+                        <img src="./assets/images/icon-pro.svg" alt="Icon Pro" />
+                      </div>
+                      <div class="card__details">
+                        <div class="card__title">Pro</div>
+                        <div class="card__price">&dollar;150/yr</div>
+                        <div class="monthFree">2 months free</div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <div class="checkDuration">
+                <div class="duration" id="monthDuration">Monthly</div>
+                <label class="durationSlider" id="durationSlider">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+                <div class="duration" id="yearDuration">Yearly</div>
+              </div>
+            </div>
+          </div>
+          <!-- STEP 3 -->
+          <div class="step" id="step-3">
+            <div class="stepTitle">Pick add-ons</div>
+            <p class="step__text">Add-ons help enhance your gaming experience.</p>
+            <div class="addOns">
+              <label for="checkbox-1" class="addonBox">
+                <input type="checkbox" name="checkbox-1" id="checkbox-1" />
+                <div class="addonBox__wrapper">
+                  <span class="checkmark"></span>
+                  <div class="addonBox__text">
+                    <div class="addonBox__service">Online service</div>
+                    <div class="addonBox__p">Access to multiplayer games</div>
+                  </div>
+                  <div class="addonBox__price" id="onlineService"></div>
+                </div>
+              </label>
+              <label for="checkbox-2" class="addonBox">
+                <input type="checkbox" name="checkbox-2" id="checkbox-2" />
+                <div class="addonBox__wrapper">
+                  <span class="checkmark"></span>
+                  <div class="addonBox__text">
+                    <div class="addonBox__service">Larger storage</div>
+                    <div class="addonBox__p">Extra 1TB of cloud save</div>
+                  </div>
+                  <div class="addonBox__price" id="storage"></div>
+                </div>
+              </label>
+              <label for="checkbox-3" class="addonBox">
+                <input type="checkbox" name="checkbox-3" id="checkbox-3" />
+                <div class="addonBox__wrapper">
+                  <span class="checkmark"></span>
+                  <div class="addonBox__text">
+                    <div class="addonBox__service">Customizable profile</div>
+                    <div class="addonBox__p">Custom theme on your profile</div>
+                  </div>
+                  <div class="addonBox__price" id="profile"></div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <!-- STEP 4 -->
+          <div class="step" id="step-4">
+            <div class="stepTitle">Finishing up</div>
+            <p class="step__text">Double-check everything looks OK before confirming.</p>
+            <div class="summary">
+              <div class="selection">
+                <div class="selection__desc">
+                  <div class="selection__name" id="selection__name">Arcade (Monthly)</div>
+                  <div class="selection__change" onclick="prevNext(-2)">Change</div>
+                </div>
+                <div class="selection__price" id="selection__price">&dollar;9/mo</div>
+              </div>
+              <div class="optionBox">
+                <div class="option" id="option-0">
+                  <div class="option__name">Online service</div>
+                  <div class="option__price">+&dollar;1/mo</div>
+                </div>
+                <div class="option" id="option-1">
+                  <div class="option__name">Larger storage</div>
+                  <div class="option__price">+&dollar;2/mo</div>
+                </div>
+                <div class="option" id="option-2">
+                  <div class="option__name">Customizable profile</div>
+                  <div class="option__price">+&dollar;2/mo</div>
+                </div>
+              </div>
+            </div>
+            <div class="totalPrice">
+              <div class="totalPrice__name">Total (per month)</div>
+              <div class="totalPrice__price">+&dollar;<span></span>/mo</div>
+            </div>
+          </div>
+          <!-- PREV/NEXT BUTTONS -->
+          <div class="buttonGroup">
+            <button type="button" id="prev" onclick="prevNext(-1)">Go Back</button>
+            <button type="button" id="next" onclick="prevNext(1)">Next Step</button>
+            <button type="submit" id="confirm">Confirm</button>
+          </div>
+        </div>
+      </form>
+      <!-- CONFIRMATION -->
+      <div class="confirmation" id="confirmation">
+        <div class="confirmation__content">
+          <div class="confirmation__image">
+            <img src="./assets/images/icon-thank-you.svg" alt="Thank You">
+          </div>
+          <div class="confirmation__title">Thank you!</div>
+          <div class="confirmation__text">Thanks for confirming your subscription! We hope you have fun 
+            using our platform. If you ever need support, please feel free 
+            to email us at support@loremgaming.com.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="./assets/scripts/script.js"></script>
+
+  <!--
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  -->
+
+</body>
+
+</html>
