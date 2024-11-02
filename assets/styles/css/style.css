@@ -311,9 +311,6 @@ body {
   opacity: 0;
   cursor: pointer;
 }
-.addOns .addonBox__wrapper {
-  display: block;
-}
 .addOns .checkmark {
   position: relative;
   width: 20px;
